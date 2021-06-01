@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>动画未来评分预测</title>
+</head>
+<body>
+    <div id="app">
+        <div style="margin:0 auto;width: 500px;">
+            <div style="margin:0 auto;width: 500px;text-align:center;">
+                <h3>动画评分预测</h3>
+            </div>
+            
+            <el-checkbox-group v-model="tagList">
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="游戏改"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="小说改"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="乙女"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="声控"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="架空"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="泡面"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="穿越"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="魔法"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="推理"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="偶像"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="神魔"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="战斗"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="美食"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="漫画"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="恋爱"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="奇幻"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="校园"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="社团"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="搞笑"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="原创"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="少女"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="冒险"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="机战"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="萌系"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="日常"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="音乐"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="热血"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="科幻"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="历史"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="运动"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="职场"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="治愈"></el-checkbox>
+                    </el-col>
+                </el-row>
+                <el-row :gutter="20">
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="特摄"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="智斗"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="励志"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6" :offset="0">
+                        <el-checkbox label="催泪"></el-checkbox>
+                    </el-col>
+                </el-row>
+              </el-checkbox-group><br>
+              
+              <span>预测得分:</span>
+              <span style="color: #F7BA2A;font-size: 20px;">{{point}}</span><br>
+              <el-rate style="display: inline-block;" v-model="point" :max=10 ></el-rate>
+              
+
+            </br></br><el-button type="success" size="small" @click="getPoint">预测</el-button>
+
+              
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+        pointMap:{
+        "游戏改": 6.38890814558058917,
+		"小说改": 6.6980028530670408,
+		"乙女":  6.02207792207792192,
+		"声控":  6.20000000000000018,
+
+		"架空":  6.2400000000000002,
+		"泡面":  6.40911458333332984,
+		"穿越":  6.5116129032258065,
+		"魔法":  6.549324324324326,
+
+		"推理":  6.5816901408450743,
+		"偶像":  6.5992857142857106,
+		"神魔":  6.6033333333333326,
+		"战斗":  6.6384225759768487,
+
+		"美食":  6.6519230769230768,
+		"漫画":  6.6980769230769264,
+		"恋爱":  6.7039319872476089,
+		"奇幻":  6.7288484848485091,
+
+		"校园":  6.7348927875243687,
+		"社团":  6.7583333333333329,
+		"搞笑":  6.7634402945818071,
+		"原创":  6.7871679197995114,
+
+		"少女":  6.7926829268292668,
+		"冒险":  6.8167968749999988,
+		"机战":  6.8504504504504515,
+		"萌系":  6.8649122807017546,
+
+		"日常":  6.9047215496367995,
+		"音乐":  6.9086705202312153,
+		"热血":  6.9119815668202822,
+		"科幻":  6.919609756097568,
+
+		"历史":  6.9269230769230781,
+		"运动":  6.9553459119496885,
+		"职场":  6.9729729729729728,
+		"治愈":  7.103885480572596,
+
+		"特摄":  7.1125000000000007,
+		"智斗":  7.2884615384615392,
+		"励志":  7.2931034482758657,
+		"催泪":  7.3212121212121257,
+        },
+        tagList:[],
+        point: 0,
+    },
+    methods: {
+        getPoint(){
+            var count = 0;
+            this.point = 0;
+            for (const iterator of this.tagList) {
+                console.log(iterator);
+                count++;
+                this.point += this.pointMap[iterator];
+                
+            }
+            console.log(this.point,count);
+            this.point = this.point/count;
+        }
+    }
+})
+</script>
+<style>
+    .el-checkbox__inner{
+        font-size: 16px !important;
+    }
+    .el-checkbox__label{
+        font-size: 16px !important;
+    }
+</style>
